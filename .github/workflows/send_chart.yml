@@ -2,7 +2,7 @@ name: Send Billboard Chart
 
 on:
   schedule:
-    - cron: '0 12 * * 1'  # 毎週月曜12:00 UTC（日本時間21:00）
+    - cron: '0 0 * * *'  # 毎日0:00 UTC → 日本時間9:00
   workflow_dispatch:  # 手動実行も可能
 
 jobs:
