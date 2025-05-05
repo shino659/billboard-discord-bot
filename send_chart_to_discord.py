@@ -11,7 +11,7 @@ for i in range(5):
     message += f"{i + 1}. {entry.title} - {entry.artist}\n"
 
 # Discord Webhook URL（自分のWebhookに置き換える）
-WEBHOOK_URL = 'https://discord.com/api/webhooks/ここにあなたのWebhook'
+WEBHOOK_URL = 'https://discordapp.com/api/webhooks/1368973300939751584/PkoOylb8HYY0ltxlJLEY-4XK2LI-wOtJXdDC8Fq_r_lNC9r3iuWEyOdhZ9L1_fwZjJnL'
 
 # Discordに送信
 payload = {"content": message}
