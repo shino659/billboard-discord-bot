@@ -2,12 +2,13 @@ name: Send Billboard Chart
 
 on:
   schedule:
-    - cron: '0 12 * * 1'  # 毎週月曜12:00 UTC
-  workflow_dispatch:
+    - cron: '0 12 * * 1'  # 毎週月曜12:00 UTC（日本時間21:00）
+  workflow_dispatch:  # 手動実行も可能
 
 jobs:
   send_chart:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -22,4 +23,3 @@ jobs:
 
       - name: Run script
         run: python send_chart_to_discord.py
-
