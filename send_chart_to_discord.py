@@ -1,15 +1,20 @@
 import billboard
 import requests
 
+# Billboard HOT 100 チャート取得
 chart = billboard.ChartData('hot-100')
+
+# 上位5曲のリストを作成
 message = "**Billboard HOT 100 Top 5**\n"
 for i in range(5):
     entry = chart[i]
     message += f"{i + 1}. {entry.title} - {entry.artist}\n"
 
-WEBHOOK_URL = 'あなたのWebhook_URLをここに貼る'
+# Discord Webhook URL（自分のWebhookに置き換える）
+WEBHOOK_URL = 'https://discord.com/api/webhooks/ここにあなたのWebhook'
 
-payload = { "content": message }
+# Discordに送信
+payload = {"content": message}
 response = requests.post(WEBHOOK_URL, json=payload)
 
 if response.status_code == 204:
