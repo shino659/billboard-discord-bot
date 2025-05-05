@@ -4,9 +4,9 @@ import requests
 # Billboard HOT 100チャート取得
 chart = billboard.ChartData('hot-100')
 
-# 上位20曲のリストを作成
-message = "**Billboard HOT 100 Top 20**\n"
-for i in range(20):
+# 上位10曲のリストを作成
+message = "**Billboard HOT 100 Top 10**\n"
+for i in range(10):
     entry = chart[i]
     message += f"{i + 1}. {entry.title} - {entry.artist}\n"
 
